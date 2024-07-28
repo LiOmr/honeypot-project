@@ -1,0 +1,1 @@
+function oauth_initialize_if_required() { return oauth_initialize({"oauth_enabled":false}) }

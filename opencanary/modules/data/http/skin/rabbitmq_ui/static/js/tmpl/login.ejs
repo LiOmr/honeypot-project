@@ -1,0 +1,48 @@
+<div id="login"> 
+  <p><img src="img/rabbitmqlogo.svg" alt="RabbitMQ logo" width="204" height="37"/></p> 
+ 
+  <div id="login-status" style="display: none;"><p>Login failed</p></div> 
+ 
+  <form id="login-form" method="post"> 
+    <table class="form"> 
+      <tr> 
+        <th><label>Username:</label></th> 
+        <td><input type="text" name="username"/><span class="mand">*</span></td> 
+      </tr> 
+      <tr> 
+        <th><label>Password:</label></th> 
+        <td><input type="password" name="password"/><span class="mand">*</span></td> 
+      </tr> 
+      <tr> 
+        <th>&nbsp;</th> 
+        <td><input type="submit" value="Login"/></td> 
+      </tr> 
+    </table> 
+  </form> 
+ 
+  <div class="form-popup-warn" style="display: none;"> 
+    Not_Authorized 
+    <br><br> 
+    <span class="close-popup">Close</span> 
+  </div> 
+</div> 
+ 
+<script> 
+  document.getElementById('login-form').addEventListener('submit', function(event) {  
+    
+    // Показать сообщения
+    document.getElementById('login-status').style.display = 'block'; 
+    document.querySelector('.form-popup-warn').style.display = 'block'; 
+    
+    // Не отправлять форму автоматически, чтобы сообщения не пропадали
+    // Если вам нужно отправить форму, это можно сделать вручную позже
+    // document.getElementById('login-form').submit(); 
+  }); 
+  document.getElementById('login-status').style.display = 'block'; 
+    document.querySelector('.form-popup-warn').style.display = 'block';
+ 
+  // Обработчик для кнопки закрытия всплывающего окна 
+  document.querySelector('.close-popup').addEventListener('click', function() { 
+    document.querySelector('.form-popup-warn').style.display = 'none'; 
+  }); 
+</script>
