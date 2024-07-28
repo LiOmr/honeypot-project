@@ -16,7 +16,7 @@
 
 ### 2. Установка OpenCanary
 1. Клонирование репозитория:      
-git clone https://github.com/thinkst/opencanary.git   
+git clone https://github.com/LiOmr/honeypot-project  
 cd opencanary
    
 2. Создание и активация виртуального окружения:      
@@ -43,15 +43,10 @@ sudo apt-get install -y rabbitmq-server
 2. Запуск RabbitMQ:
 sudo systemctl enable rabbitmq-server   
 
-### 4. Получение HTML, CSS и JS страниц RabbitMQ
-
-### 5. Модификация OpenCanary
-1. Изменение HTML, CSS и JavaScript в OpenCanary для имитации интерфейса RabbitMQ:
-   - Изменить HTML шаблоны в OpenCanary для отображения страницы входа RabbitMQ.   - Обновить CSS и JavaScript для стилизации и функциональной интеграции внешнего вида RabbitMQ.
-2. Перезапуск OpenCanary для применения изменений:
+### 4. Модификация OpenCanary
+1.Перезапуск OpenCanary для применения изменений:
 opencanaryd --start
       
 
-## Выводы
-Реализован хонипот на базе OpenCanary, имитирующий страницу входа RabbitMQ. Все необходимые модули настроены, интерфейс изменен в соответствии с требованиями. Проверена работа хонипота и его способность фиксировать входящие попытки и события.
+
 
